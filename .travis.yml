@@ -1,0 +1,17 @@
+language: c
+
+compiler:
+  - gcc
+
+# Ubuntu 16.04 LTS
+dist: xenial
+
+sudo: required
+
+install:
+- sudo apt-get -qq update
+- sudo apt-get install -y build-essential pandoc libdw-dev libpython2.7-dev
+
+script: make clean && make
+
+
